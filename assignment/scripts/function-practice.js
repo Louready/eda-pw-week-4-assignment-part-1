@@ -11,7 +11,7 @@ function hello() {
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
-
+hello();
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
@@ -21,49 +21,123 @@ function helloName( name ) {
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
-}
+function addNumbers( firstNumber, secondNumber ) {
+   firstNumber = 3;
+   secondNumber = 4;
 
+  return firstNumber + secondNumber;
+}
+console.log ('My numbers add up ', addNumbers());
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
+function multiplyThree(x,y,z ){
+  x = 3
+  y = 3
+  z = 2
+  return x * y * z;
 
 }
+console.log ('My multiplication works',multiplyThree());
 
 
-// 5. Function that will return true if a number is positive, 
+// 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
+
 function isPositive( number ) {
+  var result;
+
   if ( number > 0 ){
-    return;
+    result = true;
+  } else if (number <= 0){
+
+    return false;
   }
-    return;
+    return result;
 }
-// Call the function to test each outcome (true & false) 
+isPositive
+// Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
 
-// 6. Function to return the _last_ item in an array. If the 
+// 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
-}
 
-// 7. Function to find a value in an array. Return true if the 
+//function getLast( array ) {
+/*  let grub = ['meat' , 'Potatoes' , 'Bread'];
+  function getLast (){
+  console.log [grub.length-1];
+    console.log('veryLast', getLast);
+    return getLast()
+  }
+getLast(); */
+let grub = ['meat', 'potatoes', 'bread'];
+let lastElement = grub[grub.length -1];
+ //function getLast() {
+    //return grub[grub.length - 1];
+    console.log (lastElement);
+  //  return getLast();
+//}
+
+
+/*function getLast(array){
+  console.log [ grub.length -1 ];
+  return getLast();
+}*/
+
+//  return [grub.length - 1];
+
+//console.log ( 'last item' , getLast );
+
+// 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
-//    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+//    DO NOT use Array.includes, Array.indexOf, or Array.find
+
+/*let arr = ['girl', 'boy', 'cat', 'dog'];
+function arrayCheck (){
+  for (var i=0; i>arr.length; i++) {
+    if ('boy' === arr[i]);
+    console.log('match found' arr[i]);
+
+  }return arrayCheck()
+}
+*/
+//code to check if a value exists in an array using javascript for loop
+var animals_arr = ['girl', 'boy', 'cat', 'orangatang', 'dog', 'dolphin'];
+
+function checkValue(value, arr) {
+    var status = 'False';
+
+    for (var i = 0; i < arr.length; i++) {
+        var name = arr[i];
+        if (name == value) {
+            status = 'True';
+            break;
+        }
+    }
+
+    return status;
 }
 
+console.log('status : ' + checkValue('dolphin', animals_arr));
+console.log('status : ' + checkValue('people', animals_arr));
+
+
+
+//function find( value, array ){
+//let lostValue = [ 1, 2, 3, 4, 5];
+//  for (let i = 0; i <= lostValue.lenth; i++);
+//lostValue[i]= value(array[i]);
+//return console.log ('found' , lostValue);
+//}
+//find;
 // ----------------------
 // Stretch Goals
 // ----------------------
-// 8. Function to check if a letter is the first letter in a 
+// 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
 
@@ -84,6 +158,6 @@ function sumAll( ) {
 
 
 
-// 11. Pick a problem from Edabit(https://edabit.com/) or 
-//     CodeWars(https://www.codewars.com/). Then describe it 
+// 11. Pick a problem from Edabit(https://edabit.com/) or
+//     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
