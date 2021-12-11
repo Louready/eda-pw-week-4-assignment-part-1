@@ -15,36 +15,33 @@ hello();
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  return "Lou Coughlin";
 }
+console.log (helloName());
 // Remember to call the function to test
 
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-   firstNumber = 3;
-   secondNumber = 4;
-
-  return firstNumber + secondNumber;
+  return (firstNumber + secondNumber);
 }
-console.log ('My numbers add up ', addNumbers());
+
+console.log ('My numbers add up ', addNumbers(3,3));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(x,y,z ){
-  x = 3
-  y = 3
-  z = 2
-  return x * y * z;
 
+  return x * y * z;
 }
-console.log ('My multiplication works',multiplyThree());
+
+console.log ('My multiplication works',multiplyThree(3,3,3));
 
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
 
 function isPositive( number ) {
-  var result;
+  let result;
 
   if ( number > 0 ){
     result = true;
@@ -78,16 +75,39 @@ let grub = ['meat', 'potatoes', 'bread'];
 let lastElement = grub[grub.length -1];
  //function getLast() {
     //return grub[grub.length - 1];
-    console.log (lastElement);
+  //  console.log (lastElement);
   //  return getLast();
 //}
+//**************below comment is correction*************
+let arry = ['meat', 'potatoes', 'bread'];
+let lastElementi = arry[arry.length - 1];
+//**************above comment is correction****************
+console.log(lastElementi);
+
+//function getLast(array){
+//  return  arry.length - 1
+//}
+
+//console.log (getLast);
+
+function NewArray(size) {
+    var x = [];
+    for (var i = 0; i < size; ++i) {
+        x[i] = i;
+    }
+    return x;
+}
+
+var a = NewArray("tree","branch","leave","stick");
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log (NewArray.length - 1);
 
 
-/*function getLast(array){
-  console.log [ grub.length -1 ];
-  return getLast();
-}*/
-
+//function getLast(array){
+  //console.log[ array.length -1 ];
+  //return getLast();
+//}
+//console.log ( getLast());
 //  return [grub.length - 1];
 
 //console.log ( 'last item' , getLast );
@@ -109,12 +129,12 @@ function arrayCheck (){
 var animals_arr = ['girl', 'boy', 'cat', 'orangatang', 'dog', 'dolphin'];
 
 function checkValue(value, arr) {
-    var status = 'False';
+    let status = false;
 
-    for (var i = 0; i < arr.length; i++) {
-        var name = arr[i];
+    for (let i = 0; i < arr.length; i++) {
+        let name = arr[i];
         if (name == value) {
-            status = 'True';
+            status = true;
             break;
         }
     }
